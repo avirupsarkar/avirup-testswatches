@@ -1,0 +1,32 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.wp-list-table .column-preview {
+    width: 70px;
+}
+
+.tpv-settings-option-select.tp-tooltip-select .component-color-indicator {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.tp-color-indicator .tp-indicator {
+    display: flex;
+    justify-content: end;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.tp-color-indicator {
+    position: relative;
+}
+
+.tp-color-picker {
+    position: absolute;
+    right: 2%;
+    z-index: 3;
+    background: #fff;
+}

@@ -1,0 +1,385 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+.avs-hidden-select {
+   display: none !important;
+}
+
+.avs-variation-html.variation-html.avs-type-image,
+.avs-variation-html.variation-html.avs-type-color,
+.avs-variation-html.variation-html.avs-type-select {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   max-width: 300px;
+}
+
+.avs-attr-image,
+.avs-attr-color {
+   flex: 1 0 40px;
+   max-width: 40px;
+   cursor: pointer;
+   border: 1px solid transparent;
+   transition: all .3s ease-in-out;
+}
+
+.avs-attr-image{
+   flex: 1 0 60px;
+   max-width: 60px;
+   position: relative;
+}
+.avs-attr-image.rounded{
+   border-radius: 50% !important;
+}
+.avs-attr-image:hover{
+   box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.avs-attr-image:not(.square)::after{
+   position: absolute;
+   content: '';
+   top: 1px;
+   left: 1px;
+   width: calc(100% - 2px);
+   height: calc(100% - 2px);
+   background-color: transparent;
+   border: 5px solid #fff;
+   border-radius: 50%;
+   transition: all .3s ease-in-out;
+   visibility: hidden;
+   opacity: 0;
+}
+
+
+.avs-attr-image:not(.square):hover::after,
+.avs-attr-image.swatches-active-img::after{
+   visibility: visible;
+   opacity: 1;
+}
+
+.avs-attr-image img {
+   border: 1px solid transparent;
+   transition: all .3s ease-in-out;
+}
+
+.avs-tooltip{
+   border-radius: 50%;
+}
+.avs-tooltip:not(:last-child){
+   margin-right: 4px;
+}
+
+.avs-attr-color {
+   height: 26px;
+   width: 26px;
+}
+
+.variations{
+   border: none;
+   overflow: auto;
+}
+
+.avs-shop-variations.variations tr:nth-child(2n){
+   margin-bottom: 15px;
+}
+.avs-shop-variations .value{
+   padding: 0 !important;
+}
+
+.avs-shop-variations.variations td,
+.avs-shop-variations.variations th, 
+.avs-shop-variations.variations tr,
+.variations td,
+.variations th,
+.variations tr {
+   border: none;
+}
+
+.avs-shop-variations.variations td,
+.avs-shop-variations.variations th{
+   display: flex!important;
+}
+
+.avs-shop-variations.variations tr.left,
+.avs-shop-variations.variations.left{
+   justify-content: flex-start;
+}
+
+.avs-shop-variations.variations tr.right,
+.avs-shop-variations.variations.right{
+   justify-content: end;
+}
+
+.avs-shop-variations.variations tr.center,
+.avs-shop-variations.variations.center{
+   justify-content: center;
+}
+
+.avs-attr-image.swatches-active img,
+.avs-attr-color.swatches-active,
+.avs-attr-image:hover img,
+.avs-attr-color:hover {
+   border-color: #000;
+   box-shadow: inset 0px 0px 0px 4px #fff;
+}
+
+.avs-attr-color:first-child,
+.avs-attr-image:first-child,
+.avs-attr-button:first-child {
+   margin-left: 0;
+}
+
+.avs-attr-color:last-child,
+.avs-attr-image:last-child,
+.avs-attr-button:last-child {
+   margin-right: 0;
+}
+
+
+.swatches-active-img img,
+.swatches-active {
+   border-color: #000;
+}
+
+
+.avs-attr-button {
+   flex: 1 0 auto;
+   border: 1px solid #ccc;
+   color: #343434;
+   padding: 6px 10px;
+   margin: 3px;
+   display: inline-block;
+   text-align: center;
+   cursor: pointer;
+   font-size: 13px;
+}
+
+table.avs-shop-variations{
+   margin-top: 0;
+   margin-bottom: 30px;
+}
+
+table.variations label{
+   font-size: 12px;
+   font-weight: 500;
+}
+table.variations tbody tr{
+   display: flex;
+}
+table.variations .reset_variations{
+   margin-left: 0;
+   margin-top: 5px;
+   font-size: 16px;
+}
+table.variations tbody tr:not(:last-child){
+   margin-bottom: 15px;
+}
+table.variations tbody tr th{padding: 0; display: block;}
+table.variations tbody tr td{padding: 0; display: block;}
+
+.avs-attr-button:hover {
+   color: #000;
+   border-color: #000;
+   transition: 0.3s;
+}
+
+.button-active {
+   color: #000;
+   border-color: #000;
+   transition: 0.3s;
+}
+
+.variations .value {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   max-width: 300px;
+   justify-content: space-between;
+}
+
+.avs-original-price,
+.avs-original-thumbnail {
+   display: none;
+}
+
+.avs-shop-variations.variations {
+   overflow: auto;
+   border: none;
+   width: 230px;
+}
+
+
+.avs-attr-color.avs-swatches.rounded,
+.avs-attr-image.avs-swatches.rounded img {
+   border-radius: 100px;
+}
+
+.avs-attr-button.avs-swatches.rounded{
+   border-radius: 6px;
+   padding: 7px 16px;
+}
+
+
+
+/* tooltip CSS */
+.avs-tooltip {
+   display: inline-block;
+   position: relative;
+   text-align: left;
+}
+
+
+.avs-tooltip .top,
+.avs-tooltip .bottom,
+.avs-tooltip .left,
+.avs-tooltip .right{
+   position: absolute;
+   width: max-content;
+   padding: 7px 10px;
+   color: #FFFFFF;
+   background-color: #000000;
+   font-size: 14px;
+   line-height: 14px;
+   border-radius: 3px;
+   z-index: 99999999;
+   box-sizing: border-box;
+   box-shadow: 4px 4px 8px rgba(0,0,0,.3);
+   text-align: center;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity .3s ease,visibility .3s ease,transform .3s cubic-bezier(.71,1.7,.77,1.24),-webkit-transform .3s cubic-bezier(.71,1.7,.77,1.24);
+   
+}
+.avs-tooltip .top span,
+.avs-tooltip .bottom span,
+.avs-tooltip .left span,
+.avs-tooltip .right span{
+   position: relative;
+   z-index: 1;
+}
+
+/* remove i from code */
+.avs-tooltip .top i,
+.avs-tooltip .bottom i,
+.avs-tooltip .left i,
+.avs-tooltip .right i{
+   display: none;
+}
+
+.avs-tooltip .top::after,
+.avs-tooltip .bottom::after,
+.avs-tooltip .left::after,
+.avs-tooltip .right::after{
+   content: '';
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   background-color: #000000;
+   
+}
+
+/* for top design */
+.avs-tooltip .top {
+   bottom: 100%;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.avs-tooltip .top::after{
+   bottom: -12px;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(45deg);
+}
+.avs-tooltip:hover .top{
+   visibility: visible;
+   opacity: 1;
+   transform: translateX(-50%) translateY(-12px);
+}
+
+/* for bottom design */
+.avs-tooltip .bottom {
+   top: 100%;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.avs-tooltip .bottom::after{
+   top: -12px;
+   left: 50%;
+   transform: translate(-50%, 50%) rotate(45deg);
+}
+.avs-tooltip:hover .bottom{
+   visibility: visible;
+   opacity: 1;
+   transform: translateX(-50%) translateY(12px);
+}
+
+
+
+/* for right design */
+.avs-tooltip .right {
+   top: 50%;
+   left: 100%;
+   transform: translateY(-50%) translateX(20px);
+}
+
+.avs-tooltip .right::after{
+   right: 100%;
+   top: 50%;
+   width: 10px;
+   height: 10px;
+   transform: translate(50%, -50%) rotate(45deg);
+}
+.avs-tooltip:hover .right{
+   visibility: visible;
+   opacity: 1;
+   transform: translateY(-50%) translateX(12px);
+}
+
+
+/* for left design */
+.avs-tooltip .left {
+   top: 50%;
+   right: 100%;
+   transform: translateY(-50%) translateX(-20px);
+}
+
+.avs-tooltip .left::after{
+   left: 100%;
+   top: 50%;
+   width: 10px;
+   height: 10px;
+   transform: translate(-50%, -50%) rotate(45deg);
+}
+.avs-tooltip:hover .left{
+   visibility: visible;
+   opacity: 1;
+   transform: translateY(-50%) translateX(-12px);
+}
+
+
+body.single-product{}
+body.single-product .avs-attr-button{
+   line-height: 1;
+}
+body.single-product table.variations tr{
+   display: block;
+}
+
+
+
+/*twinty twinty theme code */
+
+ul.products li.product .woocommerce-loop-product__title{
+   margin: 0 !important;
+   padding: 0 !important;
+}
+
+table.variations label{
+   padding: 0 !important;
+   margin-bottom: 8px !important;
+   display: inline-block;
+}
+
+/*twinty twinty theme code end*/
